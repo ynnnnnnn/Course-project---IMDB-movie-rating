@@ -3,7 +3,7 @@
 
 # # Course project - IMDB movie rating
 # 
-# ## ZHAO,Yanan 20671764
+# 
 # 
 # github link:  https://github.com/ynnnnnnn/Course-project---IMDB-movie-rating.git
 
