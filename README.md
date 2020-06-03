@@ -426,17 +426,17 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-# 设定grid search的参数
+# 
 grid_values = {'C':[30]}  
-# 设定打分为roc_auc
+# 
 model_LR = GridSearchCV(LR(penalty = 'l2', dual = True, random_state = 0), grid_values, scoring = 'roc_auc', cv = 20)
 model_LR.fit(train_x, label)
-# 10折交叉验证
+# 
 GridSearchCV(cv=20, estimator=LR(C=1.0, class_weight=None, dual=True,
              fit_intercept=True, intercept_scaling=1, penalty='l2', random_state=0, tol=0.0001), iid=True, n_jobs=1,
         param_grid={'C': [30]}, pre_dispatch='2*n_jobs', refit=True,
         scoring='roc_auc', verbose=0)
-#输出结果
+#
 print (model_LR.cv_results_['mean_test_score'])
 print (model_LR.cv_results_['std_test_score'])
 print (model_LR.cv_results_['params'])
